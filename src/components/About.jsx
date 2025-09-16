@@ -19,10 +19,10 @@ function About() {
             </h3>
             <p className="text-gray-600 leading-relaxed">
               At <span className="font-semibold">AQCORA</span>, we believe everyone deserves clean, safe, and mineral-rich water. 
-              Founded in 2024, our mission is to deliver a brand of water that blends **purity, wellness, and trust**.  
+              Founded in 2024, our mission is to deliver a brand of water that blends <span className="font-semibold">purity, wellness, and trust</span>.  
             </p>
             <p className="text-gray-600 leading-relaxed">
-              Every drop goes through **multi-stage RO + UV purification** while retaining essential minerals. 
+              Every drop goes through <span className="font-semibold">multi-stage RO + UV purification</span> while retaining essential minerals. 
               Our promise: water that’s as refreshing and natural as it should be.
             </p>
             <div className="mt-6">
