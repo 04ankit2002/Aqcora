@@ -13,25 +13,29 @@ function Navbar() {
   
   return (
     <header className='py-5'>
-   <nav className='flex shadow-2xl rounded-2xl px-5 h-18 font- justify-between items-center '>
-     <h1 className=' font-bold text-2xl text-gray-600 text-shadow-lg'>Aqcora</h1>
+   <nav className='flex shadow-xl rounded-2xl px-5 h-18 f justify-between items-center '>
+     <h1 className=' font-bold text-3xl text-gray-600 text-shadow-lg cursor-pointer'>Aqcora</h1>
    <div className=' hidden md:flex items-center gap-8 '>
     {
     navLinks.map((item) =>(
-      <div key={item.id} className='flex text-xl font-medium text-gray-500  items-center gap-3 hover:text-gray-400 hover:text-[22px] text-shadow-lg  '>
+      <div key={item.id} className=' cursor-pointer flex text-xl font-medium text-gray-500  items-center gap-3 hover:text-gray-400 hover:scale-110 text-shadow-md  transition-all duration-300 ease-in-out  '>
        {item.navlink}
       </div>
     ))
    }
    </div>
-   <div onClick={()=> setOpen(!open)} className='md:hidden'>
+   <div onClick={()=> setOpen(!open)} className=' cursor-pointer md:hidden'>
   {open ?  <MdCancel size={24}/> : <GiHamburgerMenu size={24} />}
    </div>
    </nav>
   {
   open && (
-    <div className='bg-red-300 absolute'>
-      <h1>jdihdihikd</h1>
+    <div className='cursor-pointer absolute flex flex-col items-center w-full gap-5 shadow-xl top-25 '>
+      {
+        navLinks.map((item) => (
+          <p key={item.id} className='text-xl font-medium text-gray-500  items-center gap-3 hover:text-gray-400 hover:scale-110 text-shadow-md  transition-all duration-300 ease-in-out'>{item.navlink}</p>
+        ))
+      }
     </div>
   )}
     </header>
