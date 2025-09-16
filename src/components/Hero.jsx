@@ -3,7 +3,7 @@ import { BsArrowDown } from 'react-icons/bs'
 
 function Hero() {
   return (
-    <main className="relative min-h-screen w-full bg-gradient-to-r from-cyan-200 via-cyan-400 to-blue-600 rounded-2xl overflow-hidden">
+    <main id='hero' className="relative min-h-screen w-full bg-gradient-to-r from-cyan-200 via-cyan-400 to-blue-600 rounded-2xl overflow-hidden">
       {/* Overlay for glass effect */}
       <div className="absolute inset-0 bg-white/10 backdrop-blur-sm"></div>
 

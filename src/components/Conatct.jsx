@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { RiMvAiLine } from "react-icons/ri";
-import { BiMapPin, BiPhone, BiSend } from "react-icons/bi";
+import { BiMailSend, BiMapPin, BiPhone, BiSend } from "react-icons/bi";
 import { LiaLinkedin } from "react-icons/lia";
 import { BsInstagram, BsTwitch, BsTwitter } from "react-icons/bs";
   
@@ -37,7 +37,7 @@ import { BsInstagram, BsTwitch, BsTwitter } from "react-icons/bs";
             <div className="space-y-6 justify-center">
               <div className="flex items-start space-x-4">
                 <div className="p-3 rounded-full bg-primary/10">
-                  <RiMvAiLine className="h-6 w-6 text-primary" />{" "}
+                  <BiMailSend className="h-6 w-6 text-primary" />{" "}
                 </div>
                 <div>
                   <h4 className="font-medium"> Email</h4>
@@ -158,7 +158,8 @@ import { BsInstagram, BsTwitch, BsTwitter } from "react-icons/bs";
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className='w-full flex items-center justify-center gap-2'
+                className='w-full flex items-center justify-center gap-4 bg-gradient-to-r from-cyan-400 to-blue-600 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 py-3 px-8 '
+                 
               >
                 {isSubmitting ? "Sending..." : "Send Message"}
                 <BiSend size={16} />

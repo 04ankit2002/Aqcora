@@ -3,12 +3,12 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { MdCancel } from "react-icons/md";
 
 function Navbar() {
-  const navLinks = [
-    { id: 1, navlink: "Home" },
-    { id: 2, navlink: "About" },
-    { id: 3, navlink: "Product" },
-    { id: 4, navlink: "Contact" },
-  ];
+  const navItems = [
+  { name: "Home", href: "#hero" },
+  { name: "About", href: "#about" },
+  { name: "Projects", href: "#products" },
+  { name: "Contact", href: "#contact" },
+];
   const [open, setOpen] = useState(false);
 
   return (
@@ -21,13 +21,13 @@ function Navbar() {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-8">
-          {navLinks.map((item) => (
+          {navItems.map((item,key) => (
             <a
-              key={item.id}
-              href={`#${item.navlink.toLowerCase()}`}
+              key={key}
+              href={item.href}
               className="relative text-lg font-medium text-gray-600 hover:text-blue-600 transition-all duration-300 group"
             >
-              {item.navlink}
+              {item.name}
               <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
             </a>
           ))}
@@ -44,15 +44,15 @@ function Navbar() {
 
       {/* Mobile Menu */}
       {open && (
-        <div className="absolute left-0 top-[70px] w-full bg-white/95 backdrop-blur-md shadow-md flex flex-col items-center py-6 gap-6 md:hidden animate-fade-in">
-          {navLinks.map((item) => (
+        <div className=" absolute left-0 top-[70px] w-full bg-white/95 backdrop-blur-md shadow-md flex flex-col items-center py-6 gap-6 md:hidden animate-fade-in ">
+          {navItems.map((item,key) => (
             <a
-              key={item.id}
-              href={`#${item.navlink.toLowerCase()}`}
+              key={key}
+              href={item.href}
               onClick={() => setOpen(false)}
               className="text-lg font-semibold text-gray-600 hover:text-blue-600 transition-all duration-300"
             >
-              {item.navlink}
+              {item.name}
             </a>
           ))}
         </div>

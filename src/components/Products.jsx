@@ -1,6 +1,6 @@
 import React from "react";
 
-function Products() {
+function Products () {
   const productList = [
     {
       id: 1,
