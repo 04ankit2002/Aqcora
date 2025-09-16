@@ -8,8 +8,8 @@ import Footer from './components/Footer'
 
 function App() {
   return (
-<div className='w-screen'>
-  <div className='max-w-7xl m-auto flex flex-col gap-10'>
+<div className='w-screen bg-[#F8FAFC]'>
+  <div className='max-w-7xl m-auto flex  flex-col gap-10'>
     <Navbar />
     <Hero />
     <About />
